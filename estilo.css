@@ -1,0 +1,56 @@
+/* Garante que o corpo e a página não tenham espaços sobrando */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* --- CARROSSEL TELA CHEIA --- */
+.carousel-item {
+    /* Faz o slide ter exatamente a altura da tela do navegador */
+    height: 100vh; 
+    min-height: 100%;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Ajuste das imagens (as mesmas que você já usava) */
+.carousel-item:nth-child(1) {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://static.escolakids.uol.com.br/2024/04/a-ilha-dessa-foto-esta-localizada-em-ubatuba-sao-paulo.jpg');
+}
+.carousel-item:nth-child(2) {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://vocenaneve.com.br/wp-content/uploads/2022/07/Denali-1.jpg');
+}
+.carousel-item:nth-child(3) {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://img.magnific.com/fotos-premium/a-bela-cidade-de-mar-del-plata-os-penhascos-e-o-cabo-corrientes_1118475-3519.jpg?semt=ais_hybrid&w=740&q=80');
+}
+
+/* Centraliza o texto no meio da tela */
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+}
+
+.carousel-caption h5 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+/* --- NAVBAR TRANSPARENTE SOBRE A IMAGEM --- */
+/* Isso faz com que a imagem comece do topo real da tela */
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5) !important; /* Fundo semi-transparente */
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #111;
+    color: white;
+    padding: 3rem 0;
+}
